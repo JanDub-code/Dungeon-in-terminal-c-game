@@ -10,6 +10,7 @@
 
 class MapMatrix {
     std::vector<std::vector<Map *> > m_map;
+    bool isInMatrix(unsigned int row, unsigned int col);
 public:
     MapMatrix(unsigned int width, unsigned int height);
 
