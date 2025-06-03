@@ -4,6 +4,18 @@
 
 #include "MapMatrix.h"
 
+bool MapMatrix::isInMatrix(unsigned int row, unsigned int col) {
+    if (row >= m_map.size()) {
+        return false;
+    }
+
+    if (col >= m_map.at(0).size()) {
+        return false;
+    }
+
+    return true;
+}
+
 MapMatrix::MapMatrix(unsigned int width, unsigned int height) {
     if (width > 0 && height > 0) {
 
@@ -25,21 +37,21 @@ MapMatrix::MapMatrix(unsigned int width, unsigned int height) {
 
 
 Map *MapMatrix::getValue(unsigned int row, unsigned int col) {
-    if (row, col) {
+    if (isInMatrix(row, col)) {
         return m_map.at(row).at(col);
-    } else {
-        return nullptr;
     }
+    return nullptr;
 }
 
 void MapMatrix::setValue(unsigned int row, unsigned int col, Map *value){
-    delete m_map.at(row).at(col); // delete the old tile to prevent memory leak
-    m_map.at(row).at(col) = value;
-
+    if (isInMatrix(row, col)) {
+        delete m_map.at(row).at(col); // delete the old tile to prevent memory leak
+        m_map.at(row).at(col) = value;
+    }
 }
 
 void MapMatrix::printOutMap(unsigned int row, unsigned int col) {
-    if (row, col) {
+    if (isInMatrix(row, col)) {
         m_map.at(row).at(col)->print();
     }
 }
