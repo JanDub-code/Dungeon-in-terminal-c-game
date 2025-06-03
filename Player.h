@@ -44,8 +44,8 @@ public:
     void print();
     int returnX();
     int returnY();
-    int setX(int x);
-    int setY(int y);
+    void setX(int x);
+    void setY(int y);
     bool isDead();
     void equippArmor(int armorItem);
     void equippWeapon(int weaponItem);

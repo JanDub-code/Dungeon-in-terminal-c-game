@@ -321,13 +321,13 @@ int Player::returnY() {
     return  m_y;
 }
 
-int Player::setX(int x) {
+void Player::setX(int x) {
     m_x = x;
-};
+}
 
-int Player::setY(int y) {
+void Player::setY(int y) {
     m_y = y;
-};
+}
 std::string Player::getName() {
     return m_name;
 }
