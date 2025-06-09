@@ -25,3 +25,7 @@ Run the game from the build directory:
 ./ZOO_projekt
 ```
 
+## Fun fact
+
+Enemies are spawned through factory classes, allowing the game to easily create foes of varying strength depending on the chosen difficulty.
+
