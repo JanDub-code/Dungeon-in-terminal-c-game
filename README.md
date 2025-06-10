@@ -1,6 +1,6 @@
 # Dungeon-in-terminal-c-game
 
-A simple dungeon crawler written in C++ that runs entirely in the terminal.
+A simple dungeon crawler written in C++ that runs entirely in the terminal. Made with love.
 
 ## Building
 
